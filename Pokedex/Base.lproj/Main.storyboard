@@ -60,7 +60,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="4mn-hU-P92">
                                 <rect key="frame" x="0.0" y="99" width="600" height="501"/>
                             </imageView>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="Bze-7K-Ud9">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search for Pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="Bze-7K-Ud9">
                                 <rect key="frame" x="0.0" y="55" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -143,11 +143,50 @@
                     </view>
                     <connections>
                         <outlet property="collection" destination="tZj-Oy-cLO" id="d96-UI-WMf"/>
+                        <outlet property="searchBar" destination="Bze-7K-Ud9" id="8rW-PB-Mvf"/>
+                        <segue destination="Fo1-wf-8Uj" kind="show" identifier="PokemonDetailVC" id="kmK-j3-8Mp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="305" y="429"/>
+        </scene>
+        <!--Pokemon DetailVC-->
+        <scene sceneID="Evj-cw-S1Q">
+            <objects>
+                <viewController id="Fo1-wf-8Uj" customClass="PokemonDetailVC" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bFG-HX-ZHy"/>
+                        <viewControllerLayoutGuide type="bottom" id="iRe-0x-hPZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vJu-e8-8An">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GiM-k2-tci">
+                                <rect key="frame" x="225" y="262.5" width="150" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="6YA-HY-WQI"/>
+                                    <constraint firstAttribute="width" constant="150" id="dgr-ye-WxR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.55533039380000004" green="1" blue="0.38145369649999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="GiM-k2-tci" firstAttribute="centerY" secondItem="vJu-e8-8An" secondAttribute="centerY" id="jKX-nm-gZn"/>
+                            <constraint firstItem="GiM-k2-tci" firstAttribute="centerX" secondItem="vJu-e8-8An" secondAttribute="centerX" id="jj7-3R-fmf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pokelbl" destination="GiM-k2-tci" id="X8Q-TS-e86"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oxI-iJ-de6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1012" y="429"/>
         </scene>
     </scenes>
     <resources>
