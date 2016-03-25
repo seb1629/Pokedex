@@ -60,8 +60,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             }
             
             
-            
-            
         } catch let err as NSError {
             print(err.debugDescription)
         }
